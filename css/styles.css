@@ -13,13 +13,25 @@
       Pink: hsl(356, 100%, 75%) - Purple: hsl(250, 100%, 75%)https://colors.dopely.top/color-pedia
   */
 
-  --hue: 348;
-  --first-color: hsl(var(--hue), 100%, 55%);
+  /* --hue: 14;
+  --first-color: hsl(var(--hue), 100%, 60%); */
+  /* --hue: 162;
+  --first-color: hsl(var(--hue), 100%, 40%); */
+  --hue: 356;
+  --first-color: hsl(var(--hue), 100%, 65%);
+  /* --hue: 88;
+  --first-color: hsl(var(--hue), 100%, 40%); */
+  /* --hue: 8;
+  --first-color: hsl(var(--hue), 100%, 65%); */
+  /* --hue: 348;
+  --first-color: hsl(var(--hue), 100%, 60%); */
   --first-color-alt: hsl(var(--hue), 56%, 35%);
   --title-color: hsl(228, 8%, 95%);
   --text-color: hsl(228, 8%, 65%);
-  --body-color: hsl(228, 15%, 20%);
-  --container-color: hsl(228, 15%, 15%);
+  --body-color: hsl(228, 15%, 10%);
+  /* --body-color: hsl(228, 15%, 20%); */
+  --container-color: hsl(228, 15%, 5%);
+  /* --container-color: hsl(228, 15%, 15%); */
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -228,6 +240,22 @@ svg {
 }
 
 /* Add blur to header */
+.blur-header {
+  background-color: transparent;
+}
+
+.blur-header::after {
+  content: "";
+  position: absolute;
+  width: 1000%;
+  height: 100%;
+  background-color: hsla(0, 0%, 10%, 0.3);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px); /* for safari */
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 
 /* Active link */
 
@@ -296,7 +324,7 @@ svg {
 .home__blob {
   width: 320px;
   fill: var(--first-color);
-  filter: drop-shadow(0 12px 12px hsla(var(--hue), 100%, 40%, 0.2));
+  filter: drop-shadow(0 12px 12px hsla(var(--hue), 100%, 40%, 0.5));
 }
 
 .home__img {
@@ -321,6 +349,34 @@ svg {
 }
 
 /*=============== ABOUT ===============*/
+.about__container {
+  row-gap: 2.5rem;
+}
+
+.about__data {
+  text-align: center;
+}
+
+.about__description {
+  margin-bottom: 2rem;
+}
+
+.about__image {
+  justify-self: center;
+}
+.about__blob {
+  width: 320px;
+}
+
+.about__blob path {
+  stroke: var(--first-color);
+}
+
+.about__img {
+  width: 900px;
+  height: 861px;
+  transform: translateX(-115px);
+}
 
 /*=============== SKILLS ===============*/
 
