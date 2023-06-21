@@ -40,6 +40,42 @@ const blurHeader = () => {
 window.addEventListener("scroll", blurHeader);
 
 /*=============== EMAIL JS ===============*/
+const contactForm = document.getElementById("contact-form"),
+  contactMessage = document.getElementById("contact-message");
+
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  // serviceID - templateID - #form - publicKey
+
+  emailjs
+    .sendForm(
+      "service_y9x24tt",
+      "template_bp3dxi4",
+      "#contact-form",
+      "ptecl0zZChz_U__Nj"
+    )
+    .then(
+      () => {
+        // Show Sent message
+        contactMessage.textContent = "Message Sent ✅";
+
+        // Remove message after 5 sec
+        setTimeout(() => {
+          contactMessage.textContent = "";
+        }, 5000);
+
+        // Clear Input fields
+        contactForm.reset();
+      },
+      () => {
+        //Show error Message
+        contactMessage.textContent = "Error encountered❗";
+      }
+    );
+};
+
+contactForm.addEventListener("submit", sendEmail);
 
 /*=============== SHOW SCROLL UP ===============*/
 
