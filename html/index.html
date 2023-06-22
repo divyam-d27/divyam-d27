@@ -31,23 +31,27 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#" class="nav__link">Home</a>
+              <a href="#home" class="nav__link link1 active-link">Home</a>
             </li>
 
             <li class="nav__item">
-              <a href="#" class="nav__link">About</a>
+              <a href="#about" class="nav__link link2">About</a>
             </li>
 
             <li class="nav__item">
-              <a href="#" class="nav__link">Services</a>
+              <a href="#skills" class="nav__link link3">Skills</a>
             </li>
 
             <li class="nav__item">
-              <a href="#" class="nav__link">Projects</a>
+              <a href="#services" class="nav__link link4">Services</a>
             </li>
 
             <li class="nav__item">
-              <a href="#" class="nav__link">Contact</a>
+              <a href="#projects" class="nav__link link5">Projects</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#contact" class="nav__link link6">Contact</a>
             </li>
           </ul>
 
@@ -258,7 +262,7 @@
       </section>
 
       <!--==================== SKILLS ====================-->
-      <section class="skills section">
+      <section class="skills section" id="skills">
         <div class="skills__container container grid">
           <div class="skills__data">
             <h3 class="section__subtitle">Favourite <span>Skills</span></h3>
@@ -438,9 +442,6 @@
               class="contact__input"
               required
               placeholder="Enter Your Message"
-              id=""
-              cols="30"
-              rows="10"
             ></textarea>
             <p class="contact__message" id="contact-message"></p>
             <button type="submit" class="button contact__button">
@@ -488,6 +489,9 @@
     </footer>
 
     <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-line"></i>
+    </a>
 
     <!--=============== SCROLLREVEAL ===============-->
     <script src=""></script>
