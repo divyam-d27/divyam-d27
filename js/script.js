@@ -51,7 +51,7 @@ const sendEmail = (e) => {
       "service_y9x24tt",
       "template_bp3dxi4",
       "#contact-form",
-      "ptecl0zZChz_U__Nj"
+      "JWiFMrIVGQQIcqrg8"
     )
     .then(
       () => {
